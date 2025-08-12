@@ -877,12 +877,10 @@
                 <img class="logo" src="https://static.bundle.app/bundle-arena/static/arena-logo.png" height="82" />
             </div>
             <div class="header-sponsor">
-                <a href="" target="_blank" rel="noopener noreferrer"><img src="todlogo.png" />
-                    <span class="sponsor-name">
-                    </span>
-                    <div style="background-color: #000; min-width: 1px; min-height: 7px; opacity: 0.5;"></div>
-                    <span class="sponsor-text">
-                    </span>
+                <a href="https://www.todtv.com.tr/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO9hMB6rBeyU0K50RlU3hA84YkymBO-TAnQQ&s" />
+                    <span class="sponsor-name">TOD</span>
+                    <span class="sponsor-text">| Sponsorluğunda</span>
                 </a>
             </div>
             <div class="header-title">
@@ -933,18 +931,25 @@
     <section id="main-sponsor">
         <div class="container">
             <div class="main-sponsor-header">
-                <p class="main-sponsor-name"></p>
+                <p class="main-sponsor-name">TOD</p>
                 <div style="width: 1px; height: 7px; background-color: #B3BAC1; border-radius: 20px;"></div>
                 <p class="main-sponsor-default-text">REKLAM</p>
             </div>
-            <a href="https://www.todtv.com.tr/sinirsiz-spor/super-lig" target="_blank" class="main-sponsor-content">
+            <a href="https://www.todtv.com.tr/kampanyalar/spor/taraftar-paketleri" target="_blank" class="main-sponsor-content">
                 <div class="main-sponsor-image">
-                    <img src="arenaimage.png" alt="">
+                    <img src="https://todazure.thecode.com.tr/tod/uploads/packet-images/dc9cfab954655496dbcf2efb03ab807a.jpg" alt="TOD Süper Lig Paketi">
                 </div>
                 <div class="main-sponsor-text">
                     <p class="main-sponsor-description">
+                        Tuttuğun takımın tüm maçları, 12 taksit fırsatıyla ayda 349 TL’ye TOD’da!
                     </p>
                     <p class="main-sponsor-cta">
+                        Süper Lig Paketleri’nde neler mi var?<br><br>
+                        ✅Trendyol Süper Lig<br>
+                        ✅Trendyol 1. Lig<br>
+                        ✅Canlı TV Kanalları<br>
+                        ✅Tüm Dizi ve Filmler HEDİYE!<br><br>
+                        📱Akıllı TV, Bilgisayar, Telefon, Tablet
                     </p>
                 </div>
             </a>
@@ -1023,12 +1028,16 @@
             title: "",
             content: "Trendyol Süper Lig’de yeni sezon başlıyor! 1. haftada hem yeni takımların ilk sınavı, hem de devlerin sahaya çıkışı var. Avrupa yolunda ön eleme karşılaşmalarında boy gösterecek olan temsilcilerimizin maçları ertelenirken işte ilk haftanın öne çıkan maçları:"
         }
+        
+        // Sponsorluk bilgileri doğrudan HTML'e eklendiği için bu kısım devre dışı bırakıldı.
+        /*
         const headerSponsor = {
-            name: "TOD",
+            name: "Vodafone",
             text: "katkılarıyla hazırlandı.",
-            logo: "todlogo.png",
+            logo: "https://static.bundle.app/bundle-arena/vodafone.png",
             link: "https://www.bundle.app"
         }
+        */
 
         const weekFeaturedMatches = [
             {
@@ -1279,7 +1288,9 @@
                 ]
             }
         ]
-
+        
+        // Sponsorluk bilgileri doğrudan HTML'e eklendiği için bu kısım devre dışı bırakıldı.
+        /*
         const mainSponsor = {
             name: "Vodafone",
             image: "https://static.bundle.app/bundle-arena/vodafone-ad.png",
@@ -1287,6 +1298,7 @@
             cta: "Vodafone Red’liler yurt dışı keyfini dolu dolu yaşar. Vodafone Red ve Bundle AI ile yurt dışı paketlerinle neler yapabileceğini keşfet.",
             url: "https://www.vodafone.com.tr/red"
         }
+        */
 
         const surveyObject = {
             question: "Transfer dönemini en iyi geçiren takım hangisi?",
@@ -1396,10 +1408,10 @@ Siyah beyazlılar, “şartlara uygun bir bonservis bedeliyle” bu transferi bi
 
         document.querySelector('.header-title p').innerHTML = ' <span style="font-weight: 700;">' + headerText.title + ' </span>' + headerText.content;
 
-        document.querySelector('.header-sponsor .sponsor-name').textContent = headerSponsor.name;
-        document.querySelector('.header-sponsor .sponsor-text').textContent = headerSponsor.text
-        document.querySelector('.header-sponsor a img').src = headerSponsor.logo;
-        document.querySelector('.header-sponsor a').href = headerSponsor.link;
+        // document.querySelector('.header-sponsor .sponsor-name').textContent = headerSponsor.name;
+        // document.querySelector('.header-sponsor .sponsor-text').textContent = headerSponsor.text
+        // document.querySelector('.header-sponsor a img').src = headerSponsor.logo;
+        // document.querySelector('.header-sponsor a').href = headerSponsor.link;
 
         const featuredMatchesGroup = document.querySelector('.featured-matches-group');
         weekFeaturedMatches.forEach(match => {
@@ -1554,12 +1566,11 @@ Siyah beyazlılar, “şartlara uygun bir bonservis bedeliyle” bu transferi bi
             needToKnowSection.appendChild(needToKnowItem);
         });
 
-        const mainSponsorSection = document.querySelector('#main-sponsor');
-        mainSponsorSection.querySelector('.main-sponsor-name').textContent = mainSponsor.name;
-        mainSponsorSection.querySelector('.main-sponsor-image img').src = mainSponsor.image;
-        mainSponsorSection.querySelector('.main-sponsor-description').textContent = mainSponsor.description;
-        mainSponsorSection.querySelector('.main-sponsor-cta').textContent = mainSponsor.cta;
-        mainSponsorSection.querySelector('.main-sponsor-content').href = mainSponsor.url;
+        // document.querySelector('.main-sponsor-name').textContent = mainSponsor.name;
+        // document.querySelector('.main-sponsor-image img').src = mainSponsor.image;
+        // document.querySelector('.main-sponsor-description').textContent = mainSponsor.description;
+        // document.querySelector('.main-sponsor-cta').textContent = mainSponsor.cta;
+        // document.querySelector('.main-sponsor-content').href = mainSponsor.url;
 
 
         const surveySection = document.querySelector('#survey');
